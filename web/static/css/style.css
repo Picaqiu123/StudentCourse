@@ -1,0 +1,305 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #f5f5f5;
+    overflow: auto;
+}
+table {
+    margin: auto;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+.header{
+    height: 70px;
+    background-color: #88b3f3;
+}
+.header .logo{
+    background: url(../img/LOGO.png) no-repeat;
+    background-size: 50px;
+    height: 70px;  
+    font-size: 25px;
+    line-height: 70px;
+    padding-left: 65px;
+    font-weight:500;
+    float: left;
+    width: 400px;
+}
+.header .user{
+    height: 70px;
+    color: #fff;
+    line-height: 70px;
+    font-weight: 700;
+    float: right;
+    margin-right: 25px;
+    font-size: 18px;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+.header .user .point{
+    float: right;
+    margin-top: 25px;
+    margin-left: 3px;
+}
+.header .user:hover ul{
+    display: block;
+}
+.header .user ul{
+    list-style: none;
+    background-color: #fff;
+    padding: 0px 10px;
+    box-shadow: 2px 2px 3px #ccc;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+.header .user ul li{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px dotted #ccc;
+}
+.header .user ul li a{
+    color: #333333;
+    font-size: 14px;
+    font-weight: 300;
+    display: block;
+    padding: 0px 20px;
+}
+.header .user ul li a:hover{
+    background-color: #f2f2f2;
+}
+.left{
+    position: absolute;
+    width: 200px;
+    float: left;
+    left: 0px;
+    bottom: 0px;
+    top: 70px;
+    background-color: #fff;
+
+}
+.left .title{
+    height: 48px;
+    line-height: 48px;
+    background-color: #e3e3e3;
+    border-bottom: 1px solid #e1e1e1;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.menux p{
+    height: 40px;
+    line-height: 40px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: center;
+}
+.menux p:hover{
+    background-color: #82adee;
+    color:#fff;
+    cursor: pointer;
+
+}
+.menux p:hover i{
+    color:#fff;
+    cursor: pointer;
+
+}
+.menux p i{
+    color: #a6c3f0;
+}
+
+.menux p .point{
+    float: right;
+    margin-top: 12px;
+    margin-right: 10px;
+    color:#95bdf8 !important;
+}
+.menux ul{
+    list-style: none;
+}
+.menux ul li{
+    line-height: 36px;
+    height: 36px;
+    border-bottom: 1px dotted #ccc;
+    box-sizing: border-box;
+    color: #666;
+    z-index: 999;
+}
+.menux ul li a{
+    display: block;
+    padding-left: 50px;
+    color: #666;
+}
+.menux ul li a:hover{
+     color: #7ba9ee;
+}
+.menux ul li i{
+    color: #95bdf8;
+}
+.menux ul li:hover{
+    background-color: #e3ebf9;
+    cursor: pointer;
+    
+}
+.main {
+    float: right;
+    position: absolute;
+    float: left;
+    left: 210px;
+    right: 0px;
+    bottom: 0px;
+    top: 70px;
+}
+.location {
+    height: 40px;
+    line-height: 40px;
+    border:1px solid #f0f0f0;
+    background-color: #fff;
+    padding-left: 10px;
+    box-sizing: border-box;
+    color: #666;
+}
+.location input {
+    height:26px;
+
+}
+.condition{
+    background-color: #FFF;
+    border: 1px solid #f0f0f0;
+    margin-top: 8px;
+    padding: 8px 5px;
+    color: #666;
+}
+.condition button{
+    margin-right: 10px;
+    background-color: #88b3f3;
+    color:#fff;
+    border:1px solid #e0e0e0;
+    padding: 2px 5px;
+    font-size: 12px;
+    border:0px;
+    border-radius: 2px;
+}
+.condition button:hover{
+    background-color: #5393f2;
+}
+/*.tableContent {*/
+/*    width: 94%;*/
+/*    height: 80%;*/
+/*    overflow:hidden;*/
+/*}*/
+.tableList{
+    width: 95%;
+    margin: 8px auto;
+    background-color: #fff;
+    border-collapse: collapse ;
+    color: #666;
+    text-align: center;
+}
+
+.tableList td, th{
+    height: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+.tableList th{
+    background-color: #f0f0f0;
+}
+.tableList td{
+    background-color:#fff ;
+    padding: 0px 2px;
+}
+
+.tableList tr:nth-child(odd){
+    background-color: #fff;
+}
+.tableList tr:nth-child(even){
+    background-color: #e0e0e0;
+}
+.tableList tr:hover{
+    background-color: #f0f0f0;
+}
+.tableList .edit{
+    color: #5393f2;
+}
+.tableList .remove{
+    color: rgb(232, 103, 103);
+}
+.tableList .edit,.tableList .remove{
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.page{
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    background-color: #fff;
+    border-collapse: collapse;
+    height: 35px;
+    margin: auto;
+}
+.page button{
+    margin-right: 10px;
+    background-color: #88b3f3;
+    color:#fff;
+    border:1px solid #e0e0e0;
+    padding: 2px 10px;
+    font-size: 12px;
+    border:0px;
+    border-radius: 2px;
+}
+.page button:hover{
+    background-color: #5393f2;
+}
+.page-no{
+    width: 40px; 
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+.add{
+    position:absolute;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    bottom: 0px; 
+    /* top: 10px;
+    right: 0px;
+    left: 0px;  */
+}
+.tableAdd{
+    width: 50%;
+    margin: 30px auto;
+    border: 1px solid #fff;
+}
+.tableAdd td{
+    text-align: center;
+    height: 35px;
+    padding-left: 20px;
+    color: #666;
+}
+.tableAdd td input{
+    height: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+.tableAdd button{
+    margin-right: 10px;
+    background-color: #88b3f3;
+    color:#fff;
+    border:1px solid #e0e0e0;
+    padding: 2px 5px;
+    font-size: 14px;
+    border:0px;
+    border-radius: 2px;
+}
+.tableAdd button:hover{
+    background-color: #5393f2;
+}

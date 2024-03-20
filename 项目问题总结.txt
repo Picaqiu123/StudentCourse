@@ -1,0 +1,41 @@
+1、运行的异常问题
+java.sql.SQLException: QueryRunner requires a DataSource to be invoked in this way, or a Connection
+一般地，用java代码对数据库进行操作，需要先创建连接池，然后再进行查询
+此处，问题在于，创建QueryRunner时，未将连接池传入QueryRunner
+Connection conn = PropertiesUtils.getConnection();
+        Statement st = conn.createStatement();
+        QueryRunner queryRunner = new QueryRunner(PropertiesUtils.getDataSourse());
+        String sql = "select * from teacher where tzh = ? and tpwd = ?";
+        Teacher te = queryRunner.query(conn,sql,new BeanHandler<>(Teacher.class),tzh,tpwd);
+
+2、url地址格式
+        protocol :// hostname[:port] / path / [;parameters][?query]#fragment
+       如： "http://localhost:8888/bb?name=bigbear&memo-helloworld";
+       protocol: 请求协议
+       host: URL主机名已全部转换成小写, 包括端口信息
+       auth:URL中身份验证信息部分
+       hostname:主机的主机名部分, 已转换成小写
+       port: 主机的端口号部分
+       pathname: URL的路径部分,位于主机名之后请求查询之前
+       search: URL 的“查询字符串”部分，包括开头的问号。
+       path: pathname 和 search 连在一起。
+3、如何乱码问题
+1.解决页面内容中的乱码
+  response.setContentType("text/html;charset=UTF-8");
+  相当于：
+  response.setCharacterEncoding("UTF-8");//输出一个完整的网页
+  response.setHeader("Content-type","text/html;charset=utf-8");
+2.GET中文乱码
+          //将乱码的字符串编码（iso8859-1）成字节
+  //        byte[] bytes = username.getBytes("iso8859-1");
+  //        //将字节解码(utf-8)成字符串
+  //        String newUsername = new String(bytes,"utf-8");
+  //		相当于
+          username = new String(username.getBytes("iso8859-1"),"utf-8");
+          System.out.println(username);
+3、出现$（#form）.validate is not a function的问题 (就是validate验证不了）
+  今天搞个form表单验证，提交时死活没效果。。。
+  原来使用jquery.validate.js是需要有正确的载入顺序的，首先jquery.然后是jquery.validate.js，
+  然后自己的validate.js文件
+4、IDEA中 为什么 CSS 内容 修改 了，浏览器 中没有 更新（已解决） 解决办法：清除浏览器缓存即可。 
+F12以后，找到找到网络，右键清楚缓存即可。 解决 css 样式在 idea 上不加载 css 样式的

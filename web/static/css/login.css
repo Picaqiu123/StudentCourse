@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Microsoft YaHei";
+}
+html,body{
+    background-image: url(../img/bg1.jpg);
+    background-size: 100% 100%;
+    height: 100%;
+    
+}
+.login {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    top: 25%;
+    left: 60%;
+    right: 10%;
+    bottom: 28%;
+    border-radius: 5px;
+
+}
+.title,.u,.p,.l,.s,.tips{
+    position: absolute;
+    width: 100%;
+}
+input {
+    background-color:rgba(255, 253, 253, 0.962) !important;
+    height: 35px;
+    border: 0px;
+    border-radius: 3.5px;
+    width: 80%;
+
+} 
+.uname{
+    background: url(../img/user2.png) no-repeat left;
+    background-size: contain;
+    padding-left: 35px;
+    box-sizing: border-box;
+}
+.pwd {
+    background: url(../img/pwd.png) no-repeat left;
+    background-size: contain;
+    padding-left: 35px;
+    box-sizing: border-box;
+}
+button{
+    background-color: #88b3f3;
+    height: 35px;
+    width: 75%;
+    border: 0px;
+    border-radius: 5px;
+    color: rgb(255, 251, 251);
+    font-size: 18px;
+
+}
+select{
+    width: 80%;
+    height: 30px;
+    border-radius: 3px;
+    border:1px solid #eee;
+}
+.title {
+    top: 0%;
+    bottom: 80%;
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+    padding-top:10px;
+    box-sizing: border-box;
+}
+.u {
+    top: 20%;
+    bottom: 60%;
+    left: 10%;
+}
+.p {
+    top: 40%;
+    bottom: 40%;
+    left: 10%;
+}
+.s {
+    top:57%;
+    bottom: 20%;
+    left: 10%;
+}
+.l {
+    top: 75%;
+    bottom: 15%;
+    left: 10%;
+}
+
+.tips {
+    top: 90%;
+    bottom: 0%;
+    font-size: 13px;
+    color: #ff0000b0;
+    text-align: center;
+}
